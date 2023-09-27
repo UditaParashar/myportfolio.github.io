@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Udita Parashar's Portfolio</title>
+    <link rel="stylesheet" href="portfolioStyle.css">
+    <script src="https://kit.fontawesome.com/a032e9a9b3.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="Images/Logo.png" class="logo">
+            <ul>
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#certificates">Certificates</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header-text">
+            <p>Full Stack Developer</p>
+            <h1>Hi, I'm <span>Udita Parashar</span> </h1>
+        </div>
+    </div>
+</div>
+
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="Images/MyPhoto3.png">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>Adaptable B.Tech graduate with excellent problem-solving skills and a collaborative mindset. 
+                    Known for effectively applying technical knowledge to address real-world challenges.</p>
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li>HTML</li><li>CSS</li><li>JavaScript</li><li>React.js</li><li>Node.js</li><li>Php</li><li>MongoDB</li>
+                        <li>Android Development</li><li>Web Development</li><li>Artificial Intelligence</li><li>Robotics</li>
+                        <li>Python</li><li>C and C++ Programming Language</li><li>Data Structures and Algorithms</li><li>DBMS</li>
+                        <li>MySQL</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>2019-2023</span><br>B.Tech(CSE) from Ch. Devi Lal State Institue of Engineering and Technology</li>
+                        <li><span>2016-2017</span><br>High School from Kendriya Vidaylaya Nahara</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="certificates">
+    <div class="container">
+        <h1 class="sub-title">My Certificates</h1>
+        <div class="certificates-list">
+            <div>
+                <h2>Full Stack Development</h2>
+                <img src="Images/Full Stack Development.jpeg">
+                <p>Great Learning - Issued Sept 2023</p>
+            </div>
+            <div>
+                <h2>JavaScript Essential 1</h2>
+                <img src="Images/JavaScript Essentials 1.jpeg">
+                <p>Cisco - Issued Sept 2023</p>  
+
+            </div>
+            <div>
+                <h2>Artificial Intelligence</h2>
+                <img src="Images/ArtificialIntelligence.jpeg">
+                <p>Symposium - Issued Sept 2022</p>
+            </div>
+            <div>
+                <h2>Robotics</h2>
+                <img src="Images/Robotics.jpeg">
+                <p>Symposium - Issued Aug 2022</p>
+            </div>
+            <div>
+                <h2>Python</h2>
+                <img src="Images/Python.jpeg">
+                <p>Symposium - Issued Sept 2021</p>
+            </div>
+            <div>
+                <h2>C and C++ Programming Language</h2>
+                <img src="Images/CandC++.jpeg">
+                <p>Oxford Software Institue - Issued Aug 2021</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">My Work</h1>  
+        <div class="work-list">
+            <div class="work">
+                <img src="Images/MyApp.png">
+                <div class="layer">
+                    <h3>Gram Sandesh - Android App</h3>
+                    <p>An Android Application to disseminate information and programs related to particular villages for the villagers.</p>
+                </div>
+            </div>
+            <div class="work">
+                <img src="Images/VoiceRoboticCar.jpeg">
+                <div class="layer">
+                    <h3>Voice Robot Car</h3>
+                    <p>A Voice Control Robot Car. The work is based on an Arduino microcontroller, motor drivers and a 
+                        bluetooth module.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>  
+                <p>parasharudita@gmail.com</p>
+                <p>7057819092, 9466794819</p>
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/udita-parashar-377600217/"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://www.facebook.com/parashar.udita"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/parashar_1112/"><i class="fa-brands fa-instagram"></i></a>
+
+                </div>
+            </div>   
+        </div>
+
+    </div>
+</div>
+
+<script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname) {
+        for (tablink of tablinks) {
+            tablink.classList.remove("active-link");
+            
+        }
+        for (tabcontent of tabcontents) {
+            tabcontent.classList.remove("active-tab");
+            
+        }  
+
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+
+</script>
+
+</body>
+</html>
